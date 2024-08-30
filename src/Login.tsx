@@ -1,6 +1,7 @@
 import { LoginButton } from "@inrupt/solid-ui-react";
 
 function Login() {
+
   return (
     <>
       <h1>Solid Login App</h1>
@@ -10,6 +11,7 @@ function Login() {
         onError={console.error}
       />
       <h3>Identity provider: solidcommunity.net</h3>
+      <h3>Redirect URL: {window.location.href}</h3>
     </>
   );
 }
