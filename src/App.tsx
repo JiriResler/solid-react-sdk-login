@@ -4,7 +4,6 @@ import { useSession } from "@inrupt/solid-ui-react";
 import Profile from "./Profile";
 import Login from "./Login";
 import RequireAuth from "./RequireAuth";
-import { handleIncomingRedirect } from "@inrupt/solid-client-authn-browser";
 
 function App() {
   const { session } = useSession();
@@ -13,16 +12,7 @@ function App() {
     return <Profile />;
   }
 
-  return (
-    <>
-      <button
-        onClick={() => handleIncomingRedirect({ restorePreviousSession: true })}
-      >
-        Handle incoming redirect
-      </button>
-      <Login />
-    </>
-  );
+  return <Login />;
 
   return (
     <>
