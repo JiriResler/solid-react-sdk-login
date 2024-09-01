@@ -10,18 +10,7 @@ function App() {
   const { session } = useSession();
 
   if (session.info.isLoggedIn) {
-    return (
-      <>
-        <button
-          onClick={() =>
-            handleIncomingRedirect({ restorePreviousSession: true })
-          }
-        >
-          Handle incoming redirect
-        </button>
-        <Profile />
-      </>
-    );
+    return <Profile />;
   }
 
   return (
