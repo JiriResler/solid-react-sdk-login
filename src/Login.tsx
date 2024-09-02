@@ -6,7 +6,7 @@ function Login() {
   const { session } = useSession();
 
   if (session.info.isLoggedIn) {
-    return <Navigate to="/profile" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return (
