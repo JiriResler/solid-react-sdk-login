@@ -14,7 +14,7 @@ function Login() {
       <h1>Solid Login App</h1>
       <LoginButton
         oidcIssuer={"https://solidcommunity.net/"}
-        redirectUrl={"http://localhost:5173/login"}
+        redirectUrl={new URL('/login', window.location.origin).toString()}
         onError={console.error}
       />
       <h3>Identity provider: solidcommunity.net</h3>
