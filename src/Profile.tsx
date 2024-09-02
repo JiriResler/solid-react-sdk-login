@@ -1,8 +1,13 @@
 import { useSession } from "@inrupt/solid-ui-react";
 import { LogoutButton } from "@inrupt/solid-ui-react";
+import { Navigate } from "react-router-dom";
 
 function Profile() {
   const { session } = useSession();
+
+  if (!session.info.isLoggedIn) {
+    return <Navigate to="/login" replace />;
+  }
 
   return (
     <>
